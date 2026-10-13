@@ -643,49 +643,7 @@
         .forEach(section => observer.observe(section));
     }
 
-    // Lokal säsongsfråga. Ingen information skickas till en server.
-    const pollButtons = document.querySelectorAll(".poll-option");
-    const pollMessage = document.querySelector(".poll-message");
-    const storageKey = "golfresan2027-season";
-
-    function showChoice(choice, saved = true) {
-      if (!["start", "end"].includes(choice)) return;
-
-      pollButtons.forEach(button => {
-        button.setAttribute(
-          "aria-pressed",
-          String(button.dataset.choice === choice)
-        );
-      });
-
-      const label = choice === "start"
-        ? "början av säsongen"
-        : "slutet av säsongen";
-
-      pollMessage.textContent = saved
-        ? `Ditt val: ${label}. Sparat i den här webbläsaren.`
-        : `Ditt val: ${label}. Kunde inte sparas mellan besök.`;
-    }
-
-    pollButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const choice = button.dataset.choice;
-        let saved = true;
-
-        try {
-          localStorage.setItem(storageKey, choice);
-        } catch {
-          saved = false;
-        }
-
-        showChoice(choice, saved);
-      });
-    });
-
-    try {
-      showChoice(localStorage.getItem(storageKey));
-    } catch {
-      // Sidan fungerar även om lokal lagring är blockerad.
+   
     }
   </script>
 </body>
