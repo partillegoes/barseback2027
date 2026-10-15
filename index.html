@@ -19,7 +19,9 @@
       --sidebar: 245px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html {
       scroll-behavior: smooth;
@@ -34,9 +36,18 @@
       line-height: 1.65;
     }
 
-    button, a { -webkit-tap-highlight-color: transparent; }
-    button { font: inherit; }
-    a { color: inherit; }
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+    }
 
     :focus-visible {
       outline: 3px solid var(--gold);
@@ -113,7 +124,9 @@
       cursor: pointer;
     }
 
-    main { margin-left: var(--sidebar); }
+    main {
+      margin-left: var(--sidebar);
+    }
 
     .hero {
       position: relative;
@@ -127,7 +140,6 @@
         linear-gradient(135deg, #14251c, #101a16 70%);
     }
 
-    /* Dekorativ golfboll – inga externa bilder behövs. */
     .golf-ball {
       position: absolute;
       right: -95px;
@@ -165,7 +177,9 @@
       letter-spacing: -3px;
     }
 
-    h1 span { color: var(--gold); }
+    h1 span {
+      color: var(--gold);
+    }
 
     .lead {
       max-width: 600px;
@@ -191,24 +205,17 @@
       border-radius: 6px;
     }
 
-    .blue { color: var(--blue); }
-    .red { color: var(--red); }
-    .versus { color: var(--muted); font-size: 12px; }
-
-    .button {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 7px;
-      background: var(--gold);
-      color: #101a16;
-      text-decoration: none;
-      font-weight: 700;
-      transition: transform .2s, background .2s;
+    .blue {
+      color: var(--blue);
     }
 
-    .button:hover {
-      background: #f4dbab;
-      transform: translateY(-2px);
+    .red {
+      color: var(--red);
+    }
+
+    .versus {
+      color: var(--muted);
+      font-size: 12px;
     }
 
     .hero-note {
@@ -222,7 +229,9 @@
       border-top: 1px solid var(--border);
     }
 
-    .section-inner { max-width: 1000px; }
+    .section-inner {
+      max-width: 1000px;
+    }
 
     h2 {
       margin: 12px 0 22px;
@@ -237,7 +246,9 @@
       font-size: 18px;
     }
 
-    .copy strong { color: var(--text); }
+    .copy strong {
+      color: var(--text);
+    }
 
     .cards {
       display: grid;
@@ -253,15 +264,23 @@
       border-radius: 14px;
     }
 
-    .card.team-blue { border-top: 3px solid var(--blue); }
-    .card.team-red { border-top: 3px solid var(--red); }
+    .card.team-blue {
+      border-top: 3px solid var(--blue);
+    }
+
+    .card.team-red {
+      border-top: 3px solid var(--red);
+    }
 
     .card h3 {
       margin: 0 0 12px;
       font-size: 26px;
     }
 
-    .card p { margin: 0; color: var(--muted); }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
 
     .quote {
       margin: 35px 0 0;
@@ -288,52 +307,6 @@
       color: var(--muted);
     }
 
-    .poll {
-      margin-top: 35px;
-      padding: clamp(20px, 4vw, 35px);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background: var(--panel);
-    }
-
-    .poll h3 { margin-top: 0; }
-
-    .poll-options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .poll-option {
-      flex: 1 1 200px;
-      padding: 15px 18px;
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .poll-option:hover { border-color: var(--gold); }
-
-    .poll-option[aria-pressed="true"] {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: var(--bg);
-      font-weight: 700;
-    }
-
-    .poll-message {
-      min-height: 26px;
-      color: var(--gold);
-      margin-bottom: 0;
-    }
-
-    .small {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
     footer {
       padding: 25px clamp(24px, 6vw, 100px);
       border-top: 1px solid var(--border);
@@ -342,11 +315,15 @@
     }
 
     @media (min-width: 1600px) {
-      .hero { min-height: 780px; }
+      .hero {
+        min-height: 780px;
+      }
     }
 
     @media (max-width: 800px) {
-      html { scroll-padding-top: 100px; }
+      html {
+        scroll-padding-top: 100px;
+      }
 
       .sidebar {
         inset: 0 0 auto;
@@ -359,10 +336,22 @@
         border-bottom: 1px solid var(--border);
       }
 
-      .brand { font-size: 18px; }
-      .brand span { font-size: 10px; margin-top: 5px; }
-      .menu-toggle { display: block; }
-      .sidebar-note { display: none; }
+      .brand {
+        font-size: 18px;
+      }
+
+      .brand span {
+        font-size: 10px;
+        margin-top: 5px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .sidebar-note {
+        display: none;
+      }
 
       nav {
         display: none;
@@ -376,7 +365,9 @@
         border-bottom: 1px solid var(--border);
       }
 
-      nav.open { display: grid; }
+      nav.open {
+        display: grid;
+      }
 
       main {
         margin-left: 0;
@@ -389,22 +380,46 @@
         padding-bottom: 60px;
       }
 
-      h1 { letter-spacing: -2px; }
-      .section { padding-top: 55px; padding-bottom: 55px; }
-      .cards { grid-template-columns: 1fr; }
-      .golf-ball { width: 300px; height: 300px; }
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .section {
+        padding-top: 55px;
+        padding-bottom: 55px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .golf-ball {
+        width: 300px;
+        height: 300px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition: none !important; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
     }
   </style>
 </head>
 
 <body>
   <aside class="sidebar" aria-label="Sidomeny">
-    <a class="brand" href="#start" aria-label="Golfresan 2027 – startsidan">
+    <a
+      class="brand"
+      href="#start"
+      aria-label="Golfresan 2027 – startsidan"
+    >
       GOLFRESAN
       <span>2027 · ROUND TWO</span>
     </a>
@@ -436,7 +451,9 @@
       <div class="golf-ball" aria-hidden="true"></div>
 
       <div class="hero-content">
-        <div class="eyebrow">Efter succén 2026 · Uppföljaren väntar</div>
+        <div class="eyebrow">
+          Efter succén 2026 · Uppföljaren väntar
+        </div>
 
         <h1 id="hero-title">
           Samma rivalitet.<br>
@@ -456,7 +473,6 @@
           <span class="team-label red">Team Red</span>
         </div>
 
-
         <p class="hero-note">
           Ny destination? Tidigare säsongsstart? Samma skyhöga puls.
         </p>
@@ -466,7 +482,11 @@
     <section class="section" id="kampen" aria-labelledby="battle-title">
       <div class="section-inner">
         <div class="eyebrow">Prestige på varje hål</div>
-        <h2 id="battle-title">Vänskap utanför banan.<br>Full kamp på den.</h2>
+
+        <h2 id="battle-title">
+          Vänskap utanför banan.<br>
+          Full kamp på den.
+        </h2>
 
         <div class="copy">
           <p>
@@ -475,9 +495,12 @@
             Den där varje match räknas, varje vunnet hål känns
             och varje missad putt kan bli samtalsämnet vid middagen.
           </p>
+
           <p>
             2027 väntar nästa kapitel: en rafflande lagtävling
-            i Ryder Cup-format där återigen <strong> Team Blue möter Team Red</strong>, med nya hcp-bestämda lag.
+            i Ryder Cup-format där återigen
+            <strong>Team Blue möter Team Red</strong>,
+            med nya hcp-bestämda lag.
             Nya chanser att glänsa. Nya nerver att bemästra.
             Och all anledning att redan nu börja längta.
           </p>
@@ -489,7 +512,7 @@
             <p>
               Kalla huvuden. Heta klubbor.
               När pressen ökar gäller det att sätta nästa slag –
-              och låta resultatet tala.
+              och låta resultatet tala. Vilka blir Team Blue 2027?
             </p>
           </article>
 
@@ -498,7 +521,7 @@
             <p>
               Glöd i blicken. Kamp hela vägen.
               Inget hål ges bort och ingen match är över
-              förrän den sista putten har fallit.
+              förrän den sista putten har fallit. Vilka blir Team Red 2027?
             </p>
           </article>
         </div>
@@ -513,20 +536,28 @@
     <section class="section" id="resan" aria-labelledby="trip-title">
       <div class="section-inner">
         <div class="eyebrow">Blicken mot 2027</div>
-        <h2 id="trip-title">Ska vi börja säsongen<br>med årets höjdpunkt?</h2>
+
+        <h2 id="trip-title">
+          Ska vi börja säsongen<br>
+          med årets höjdpunkt?
+        </h2>
 
         <div class="copy">
           <p>
             2026 avslutade vi säsongen med en riktig fullträff.
             Men varför vänta till slutet igen?
-            <strong>Tänk om vi i stället öppnar säsongen 2027
-            med golfresan vi alla ser fram emot?</strong>
+            <strong>
+              Tänk om vi i stället öppnar säsongen 2027
+              med golfresan vi alla ser fram emot?
+            </strong>
           </p>
+
           <p>
             En tidig resa. Nyladdade förväntningar.
             Och en första tee där både vårkänslorna och
             tävlingsnerverna gör sig påminda.
           </p>
+
           <p>
             Vart vi åker är fortfarande öppet, och datumet är inte spikat.
             Just nu får längtan, försnacket och drömmen om nästa
@@ -540,8 +571,6 @@
           <span>Datum: inte bestämt</span>
           <span>Format: Ryder Cup</span>
         </div>
-
-
       </div>
     </section>
 
@@ -564,8 +593,15 @@
 
     menuButton.addEventListener("click", () => {
       const isOpen = navigation.classList.toggle("open");
-      menuButton.setAttribute("aria-expanded", String(isOpen));
-      menuButton.textContent = isOpen ? "Stäng ✕" : "Meny ☰";
+
+      menuButton.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuButton.textContent = isOpen
+        ? "Stäng ✕"
+        : "Meny ☰";
     });
 
     navLinks.forEach(link => {
@@ -573,42 +609,54 @@
     });
 
     document.addEventListener("keydown", event => {
-      if (event.key === "Escape" && navigation.classList.contains("open")) {
+      if (
+        event.key === "Escape" &&
+        navigation.classList.contains("open")
+      ) {
         closeMenu();
         menuButton.focus();
       }
     });
 
-    window.matchMedia("(min-width: 801px)")
-      .addEventListener("change", closeMenu);
+    const mediaQuery = window.matchMedia("(min-width: 801px)");
 
-    // Markera den menypunkt som motsvarar aktuell sektion.
-    if ("IntersectionObserver" in window) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-
-          navLinks.forEach(link => {
-            const active = link.hash === "#" + entry.target.id;
-            link.classList.toggle("active", active);
-
-            if (active) {
-              link.setAttribute("aria-current", "location");
-            } else {
-              link.removeAttribute("aria-current");
-            }
-          });
-        });
-      }, {
-        rootMargin: "-25% 0px -60% 0px",
-        threshold: 0
-      });
-
-      document.querySelectorAll("main section")
-        .forEach(section => observer.observe(section));
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", closeMenu);
+    } else {
+      mediaQuery.addListener(closeMenu);
     }
 
-   
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+              return;
+            }
+
+            navLinks.forEach(link => {
+              const isActive =
+                link.hash === "#" + entry.target.id;
+
+              link.classList.toggle("active", isActive);
+
+              if (isActive) {
+                link.setAttribute("aria-current", "location");
+              } else {
+                link.removeAttribute("aria-current");
+              }
+            });
+          });
+        },
+        {
+          rootMargin: "-25% 0px -60% 0px",
+          threshold: 0
+        }
+      );
+
+      document
+        .querySelectorAll("main section")
+        .forEach(section => observer.observe(section));
     }
   </script>
 </body>
